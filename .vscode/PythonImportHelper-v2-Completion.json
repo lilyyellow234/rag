@@ -1,0 +1,247 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "loguru",
+        "description": "loguru",
+        "isExtraImport": true,
+        "detail": "loguru",
+        "documentation": {}
+    },
+    {
+        "label": "webdriver",
+        "importPath": "selenium",
+        "description": "selenium",
+        "isExtraImport": true,
+        "detail": "selenium",
+        "documentation": {}
+    },
+    {
+        "label": "By",
+        "importPath": "selenium.webdriver.common.by",
+        "description": "selenium.webdriver.common.by",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.common.by",
+        "documentation": {}
+    },
+    {
+        "label": "Options",
+        "importPath": "selenium.webdriver.chrome.options",
+        "description": "selenium.webdriver.chrome.options",
+        "isExtraImport": true,
+        "detail": "selenium.webdriver.chrome.options",
+        "documentation": {}
+    },
+    {
+        "label": "NoSuchElementException",
+        "importPath": "selenium.common.exceptions",
+        "description": "selenium.common.exceptions",
+        "isExtraImport": true,
+        "detail": "selenium.common.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ElementClickInterceptedException",
+        "importPath": "selenium.common.exceptions",
+        "description": "selenium.common.exceptions",
+        "isExtraImport": true,
+        "detail": "selenium.common.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "get_random_proxy",
+        "kind": 2,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "def get_random_proxy():\n    return random.choice(PROXIES)\n# Ref: https://selenium-python.readthedocs.io/locating-elements.html\nBASE_URL = \"https://glosbe.com/zh/vi\"\nCONTENT = \"中央通讯社，简称中央社，是中华民国的国家通讯社。1924年4月1日由中国国民党在广州成立，1949年随中华民国政府播迁台湾。1996年依据《中央通讯社设置条例》从公司转为由中华民国政府捐助成立的财团法人机构%5Ba%5D，改制为国家通讯社%5B2%5D。目前总社设于台北市中山区的志清大楼%5B3%5D\"\nTRANSLATE_URL = f\"{BASE_URL}/{CONTENT}\"\nWAIT_TIMEOUT = 1 # wait for some seconds\n# Allow a pop-up window to be in cognito mode\nchrome_options = Options()\nchrome_options.add_argument(\"--incognito\")",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "PROXIES",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "PROXIES = [\n    \"http://proxy1:port\",\n    \"http://proxy2:port\",\n    \"http://proxy3:port\",\n    # Add more proxies as needed\n]\ndef get_random_proxy():\n    return random.choice(PROXIES)\n# Ref: https://selenium-python.readthedocs.io/locating-elements.html\nBASE_URL = \"https://glosbe.com/zh/vi\"",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "BASE_URL = \"https://glosbe.com/zh/vi\"\nCONTENT = \"中央通讯社，简称中央社，是中华民国的国家通讯社。1924年4月1日由中国国民党在广州成立，1949年随中华民国政府播迁台湾。1996年依据《中央通讯社设置条例》从公司转为由中华民国政府捐助成立的财团法人机构%5Ba%5D，改制为国家通讯社%5B2%5D。目前总社设于台北市中山区的志清大楼%5B3%5D\"\nTRANSLATE_URL = f\"{BASE_URL}/{CONTENT}\"\nWAIT_TIMEOUT = 1 # wait for some seconds\n# Allow a pop-up window to be in cognito mode\nchrome_options = Options()\nchrome_options.add_argument(\"--incognito\")\nproxy = get_random_proxy()\nchrome_options.add_argument(f'--proxy-server={proxy}')\ndriver = webdriver.Chrome(options=chrome_options)",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "CONTENT",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "CONTENT = \"中央通讯社，简称中央社，是中华民国的国家通讯社。1924年4月1日由中国国民党在广州成立，1949年随中华民国政府播迁台湾。1996年依据《中央通讯社设置条例》从公司转为由中华民国政府捐助成立的财团法人机构%5Ba%5D，改制为国家通讯社%5B2%5D。目前总社设于台北市中山区的志清大楼%5B3%5D\"\nTRANSLATE_URL = f\"{BASE_URL}/{CONTENT}\"\nWAIT_TIMEOUT = 1 # wait for some seconds\n# Allow a pop-up window to be in cognito mode\nchrome_options = Options()\nchrome_options.add_argument(\"--incognito\")\nproxy = get_random_proxy()\nchrome_options.add_argument(f'--proxy-server={proxy}')\ndriver = webdriver.Chrome(options=chrome_options)\n# Specify the URL to get the data from",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "TRANSLATE_URL",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "TRANSLATE_URL = f\"{BASE_URL}/{CONTENT}\"\nWAIT_TIMEOUT = 1 # wait for some seconds\n# Allow a pop-up window to be in cognito mode\nchrome_options = Options()\nchrome_options.add_argument(\"--incognito\")\nproxy = get_random_proxy()\nchrome_options.add_argument(f'--proxy-server={proxy}')\ndriver = webdriver.Chrome(options=chrome_options)\n# Specify the URL to get the data from\ndriver.get(TRANSLATE_URL)",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "WAIT_TIMEOUT",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "WAIT_TIMEOUT = 1 # wait for some seconds\n# Allow a pop-up window to be in cognito mode\nchrome_options = Options()\nchrome_options.add_argument(\"--incognito\")\nproxy = get_random_proxy()\nchrome_options.add_argument(f'--proxy-server={proxy}')\ndriver = webdriver.Chrome(options=chrome_options)\n# Specify the URL to get the data from\ndriver.get(TRANSLATE_URL)\n# Scroll to the end of the page and wait for some seconds",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "chrome_options",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "chrome_options = Options()\nchrome_options.add_argument(\"--incognito\")\nproxy = get_random_proxy()\nchrome_options.add_argument(f'--proxy-server={proxy}')\ndriver = webdriver.Chrome(options=chrome_options)\n# Specify the URL to get the data from\ndriver.get(TRANSLATE_URL)\n# Scroll to the end of the page and wait for some seconds\n# so that the page can be fully loaded\ndriver.execute_script(\"window.scrollTo(0, document.body.scrollHeight);\")",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "proxy",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "proxy = get_random_proxy()\nchrome_options.add_argument(f'--proxy-server={proxy}')\ndriver = webdriver.Chrome(options=chrome_options)\n# Specify the URL to get the data from\ndriver.get(TRANSLATE_URL)\n# Scroll to the end of the page and wait for some seconds\n# so that the page can be fully loaded\ndriver.execute_script(\"window.scrollTo(0, document.body.scrollHeight);\")\ntime.sleep(WAIT_TIMEOUT)\nNUMBER_LOAD = 5",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "driver",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "driver = webdriver.Chrome(options=chrome_options)\n# Specify the URL to get the data from\ndriver.get(TRANSLATE_URL)\n# Scroll to the end of the page and wait for some seconds\n# so that the page can be fully loaded\ndriver.execute_script(\"window.scrollTo(0, document.body.scrollHeight);\")\ntime.sleep(WAIT_TIMEOUT)\nNUMBER_LOAD = 5\ncount = 0\nwhile True:",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "NUMBER_LOAD",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "NUMBER_LOAD = 5\ncount = 0\nwhile True:\n    try:\n        # Scroll to the end of the page and wait for some seconds\n        # so that the page can be fully loaded\n        driver.execute_script(\"window.scrollTo(0, document.body.scrollHeight);\")\n        time.sleep(WAIT_TIMEOUT)\n        # Locate the \"LOAD MORE\" button\n        show_more_button = driver.find_element(By.XPATH, '//button[text()=\"LOAD MORE\"]')",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "count = 0\nwhile True:\n    try:\n        # Scroll to the end of the page and wait for some seconds\n        # so that the page can be fully loaded\n        driver.execute_script(\"window.scrollTo(0, document.body.scrollHeight);\")\n        time.sleep(WAIT_TIMEOUT)\n        # Locate the \"LOAD MORE\" button\n        show_more_button = driver.find_element(By.XPATH, '//button[text()=\"LOAD MORE\"]')\n        # Click on it",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "page",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "page = BeautifulSoup(driver.page_source, features=\"html.parser\")\n# Find all elements using the specified class\nelements = page.find_all(\"div\", class_=\"odd:bg-slate-100 px-1\")\nlogger.info(f\"Num of elements: {len(elements)}\")\n# Prepare lists to store product names for each language\ntexts_zh = []\ntexts_vi = []\n# Process each element\nfor element in elements:\n    try:",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "elements",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "elements = page.find_all(\"div\", class_=\"odd:bg-slate-100 px-1\")\nlogger.info(f\"Num of elements: {len(elements)}\")\n# Prepare lists to store product names for each language\ntexts_zh = []\ntexts_vi = []\n# Process each element\nfor element in elements:\n    try:\n        # Find the div with the class \"w-1/2 dir-aware-pr-1 dense\" and lang attribute \"zh\"\n        text_zh = element.find(\"div\", class_=\"w-1/2 dir-aware-pr-1 dense\", lang=\"zh\").get_text()",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "texts_zh",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "texts_zh = []\ntexts_vi = []\n# Process each element\nfor element in elements:\n    try:\n        # Find the div with the class \"w-1/2 dir-aware-pr-1 dense\" and lang attribute \"zh\"\n        text_zh = element.find(\"div\", class_=\"w-1/2 dir-aware-pr-1 dense\", lang=\"zh\").get_text()\n        texts_zh.append(text_zh)\n        # Find the div with the class \"w-1/2 dir-aware-pl-1 \" and lang attribute \"vi\"\n        text_vi = element.find(\"div\", class_=\"w-1/2 dir-aware-pl-1\", lang=\"vi\").get_text()",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "texts_vi",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "texts_vi = []\n# Process each element\nfor element in elements:\n    try:\n        # Find the div with the class \"w-1/2 dir-aware-pr-1 dense\" and lang attribute \"zh\"\n        text_zh = element.find(\"div\", class_=\"w-1/2 dir-aware-pr-1 dense\", lang=\"zh\").get_text()\n        texts_zh.append(text_zh)\n        # Find the div with the class \"w-1/2 dir-aware-pl-1 \" and lang attribute \"vi\"\n        text_vi = element.find(\"div\", class_=\"w-1/2 dir-aware-pl-1\", lang=\"vi\").get_text()\n        texts_vi.append(text_vi)",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "df = pd.DataFrame({\n    'text_zh': texts_zh,\n    'text_vi': texts_vi\n})\n# Define the destination path for the CSV file\ndest = \"./zh_vi_texts.csv\"\n# Write the DataFrame to the CSV file\nif os.path.exists(dest):\n    # If the file already exists, append to it\n    df.to_csv(dest, mode=\"a\", index=False, header=False)",
+        "detail": "examples.crawl",
+        "documentation": {}
+    },
+    {
+        "label": "dest",
+        "kind": 5,
+        "importPath": "examples.crawl",
+        "description": "examples.crawl",
+        "peekOfCode": "dest = \"./zh_vi_texts.csv\"\n# Write the DataFrame to the CSV file\nif os.path.exists(dest):\n    # If the file already exists, append to it\n    df.to_csv(dest, mode=\"a\", index=False, header=False)\nelse:\n    # Else, create a new file and write to it\n    df.to_csv(dest, mode=\"w\", index=False, header=True)\nlogger.info(f\"Data written to {dest}\")",
+        "detail": "examples.crawl",
+        "documentation": {}
+    }
+]

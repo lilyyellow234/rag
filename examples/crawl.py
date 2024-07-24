@@ -9,8 +9,20 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
 
-# Ref: https://selenium-python.readthedocs.io/locating-elements.html
+import random
 
+# List of proxies
+PROXIES = [
+    "http://proxy1:port",
+    "http://proxy2:port",
+    "http://proxy3:port",
+    # Add more proxies as needed
+]
+
+def get_random_proxy():
+    return random.choice(PROXIES)
+
+# Ref: https://selenium-python.readthedocs.io/locating-elements.html
 BASE_URL = "https://glosbe.com/zh/vi"
 CONTENT = "中央通讯社，简称中央社，是中华民国的国家通讯社。1924年4月1日由中国国民党在广州成立，1949年随中华民国政府播迁台湾。1996年依据《中央通讯社设置条例》从公司转为由中华民国政府捐助成立的财团法人机构%5Ba%5D，改制为国家通讯社%5B2%5D。目前总社设于台北市中山区的志清大楼%5B3%5D"
 TRANSLATE_URL = f"{BASE_URL}/{CONTENT}"
@@ -19,6 +31,8 @@ WAIT_TIMEOUT = 1 # wait for some seconds
 # Allow a pop-up window to be in cognito mode
 chrome_options = Options()
 chrome_options.add_argument("--incognito")
+proxy = get_random_proxy()
+chrome_options.add_argument(f'--proxy-server={proxy}')
 driver = webdriver.Chrome(options=chrome_options)
 
 # Specify the URL to get the data from
